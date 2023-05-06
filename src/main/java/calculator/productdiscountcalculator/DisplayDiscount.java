@@ -13,6 +13,8 @@ import java.io.PrintWriter;
 public class DisplayDiscount extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        req.setCharacterEncoding("UTF-8");
+        resp.setCharacterEncoding("UTF-8");
         String desc = req.getParameter("description");
         float price = Float.parseFloat(req.getParameter("price"));
         float percent = Float.parseFloat(req.getParameter("discount"));
